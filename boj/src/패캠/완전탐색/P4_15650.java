@@ -5,9 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class p4_15650 {
+public class P4_15650 {
     //N개 중 중복 없이 M개 고르기
-    static StringBuffer sb = new StringBuffer();
+    static StringBuilder sb = new StringBuilder();
     static int N, M;
     static int[] selected;
 
