@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class P4_3273 {
-    static int n, x, ans;
+    static int n, x;
     static int[] a;
 
     static void input() {
@@ -18,26 +18,32 @@ public class P4_3273 {
     }
 
     static void solve() {
-        Arrays.sort(a, 1, n+1);
-        int l = 1;
-        int r = n;
-        while (l < r) {
-            int sum = a[l] + a[r];
-            if (sum == x) {
+        Arrays.sort(a, 1, n + 1);
+        int ans = 0;
+        for (int l = 1; l <= n - 1; l++) {
+            if (biSearch(a, l + 1, n, x - a[l])) {
                 ans++;
-                l++;
-                r--;
-            } else if (sum < x) {
-                l++;
-            } else {
-                r--;
             }
         }
+        System.out.println(ans);
+    }
+
+    static boolean biSearch(int[] a, int l, int r, int x) {
+        while (l <= r) {
+            int mid = (l + r) / 2;
+            if (a[mid] > x) {
+                r = mid - 1;
+            } else if (a[mid] < x) {
+                l = mid + 1;
+            } else {
+                return true;
+            }
+        }
+        return false;
     }
 
     public static void main(String[] args) {
         input();
         solve();
-        System.out.println(ans);
     }
 }
