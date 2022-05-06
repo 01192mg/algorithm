@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class p8_1012 {
+public class P8_1012 {
     static Scanner sc = new Scanner(System.in);
     static int t, n, m, k;
     static int[][] adj;
