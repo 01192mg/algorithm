@@ -86,28 +86,20 @@ public class P2573 {
         input();
         System.out.println(solve());
     }
-}
 
-class CustomScanner {
-    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    static StringTokenizer st;
+    private static class CustomScanner {
+        static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        static StringTokenizer st;
 
-    public int nextInt() {
-        if (st == null || !st.hasMoreElements()) {
-            try {
-                st = new StringTokenizer(br.readLine());
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+        public int nextInt() {
+            if (st == null || !st.hasMoreElements()) {
+                try {
+                    st = new StringTokenizer(br.readLine());
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
+            return Integer.parseInt(st.nextToken());
         }
-        return Integer.parseInt(st.nextToken());
     }
 }
-/*
-5 7
-0 0 0 0 0 0 0
-0 2 4 5 3 0 0
-0 3 0 2 5 2 0
-0 7 6 2 4 0 0
-0 0 0 0 0 0 0
- */

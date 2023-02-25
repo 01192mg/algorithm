@@ -1,7 +1,5 @@
 package 프로그래머스.prac;
 
-import 프로그래머스.devmatching.P1;
-
 // https://school.programmers.co.kr/learn/courses/30/lessons/12945?language=java
 public class P12945 {
     private int[] memo;
