@@ -1,4 +1,4 @@
-package 백준.bark.x05;
+package 백준.bark.x09;
 
 import java.io.BufferedReader;
 import java.io.IOException;
